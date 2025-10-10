@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Enhanced Form Page</title>
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      background-color: #f8f9fa;
+      color: #333;
+    }
+
+    header, nav, main, footer {
+      padding: 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    header {
+      background-color: #0d6efd;
+      color: white;
+      text-align: center;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      background: #e9ecef;
+      margin-top: 0;
+    }
+
+    nav ul li {
+      margin: 0 10px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #0d6efd;
+      font-weight: bold;
+    }
+
+    section {
+      margin-bottom: 30px;
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+    }
+
+    table, th, td {
+      border: 1px solid #ddd;
+    }
+
+    th, td {
+      padding: 10px;
+      text-align: left;
+    }
+
+    th {
+      background-color: #0d6efd;
+      color: white;
+    }
+
+    img, video {
+      max-width: 100%;
+      border-radius: 8px;
+      margin-top: 10px;
+    }
+
+    form fieldset {
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      padding: 15px;
+      border-radius: 8px;
+    }
+
+    form legend {
+      font-weight: bold;
+    }
+
+    form label {
+      display: block;
+      margin-top: 10px;
+      font-weight: 600;
+    }
+
+    form input, form select, form textarea {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      box-sizing: border-box;
+    }
+
+    button {
+      background-color: #0d6efd;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    button:hover {
+      background-color: #0b5ed7;
+    }
+
+    footer {
+      text-align: center;
+      background: #e9ecef;
+      padding: 15px;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>🌿 Nature Exploration Club</h1>
+    <p>Connecting people with the beauty of the environment</p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#activities">Activities</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#register">Join Us</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <!-- SECTION 1: Lists -->
+    <section id="about">
+      <h2>About the Club</h2>
+      <p>We organize monthly activities to bring people closer to nature. Our focus areas include:</p>
+      <ul>
+        <li>Hiking and trekking</li>
+        <li>Tree planting and clean-up drives</li>
+        <li>Wildlife photography</li>
+        <li>Educational workshops</li>
+      </ul>
+    </section>
+
+    <!-- SECTION 2: Table -->
+    <section id="activities">
+      <h2>Upcoming Events</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Event</th>
+            <th>Location</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Nov 15, 2025</td>
+            <td>Tree Planting Drive</td>
+            <td>Green Park</td>
+          </tr>
+          <tr>
+            <td>Dec 5, 2025</td>
+            <td>River Cleanup</td>
+            <td>Blue Riverbank</td>
+          </tr>
+          <tr>
+            <td>Jan 12, 2026</td>
+            <td>Mountain Hike</td>
+            <td>Hilltop Trails</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- SECTION 3: Media -->
+    <section id="gallery">
+      <h2>Gallery</h2>
+      <p>Check out some highlights from our past activities:</p>
+      <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb" alt="Nature hiking group">
+      <video controls>
+        <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </section>
+
+    <!-- SECTION 4: HTML5 FORM -->
+    <section id="register">
+      <h2>Join the Club</h2>
+      <form action="#" method="post" autocomplete="on">
+        <fieldset>
+          <legend>Personal Information</legend>
+          <label for="fullname">Full Name:</label>
+          <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" required minlength="3">
+
+          <label for="email">Email Address:</label>
+          <input type="email" id="email" name="email" placeholder="you@example.com" required>
+
+          <label for="phone">Phone Number:</label>
+          <input type="tel" id="phone" name="phone" placeholder="e.g. +2348012345678" pattern="^\+?\d{10,15}$" required>
+
+          <label for="dob">Date of Birth:</label>
+          <input type="date" id="dob" name="dob" required>
+        </fieldset>
+
+        <fieldset>
+          <legend>Membership Details</legend>
+          <label for="activity">Preferred Activity:</label>
+          <select id="activity" name="activity" required>
+            <option value="">--Select an activity--</option>
+            <option value="hiking">Hiking</option>
+            <option value="cleanup">Cleanup</option>
+            <option value="treeplanting">Tree Planting</option>
+            <option value="photography">Photography</option>
+          </select>
+
+          <label>Membership Type:</label>
+          <input type="radio" id="basic" name="membership" value="basic" required>
+          <label for="basic">Basic</label>
+          <input type="radio" id="premium" name="membership" value="premium">
+          <label for="premium">Premium</label>
+
+          <label for="id">Membership ID (readonly):</label>
+          <input type="text" id="id" name="id" value="AUTO-GEN-12345" readonly>
+        </fieldset>
+
+        <fieldset>
+          <legend>Additional Information</legend>
+          <label for="comments">Why do you want to join?</label>
+          <textarea id="comments" name="comments" rows="4" placeholder="Tell us more..." minlength="10" required></textarea>
+
+          <label>
+            <input type="checkbox" name="terms" required>
+            I agree to the terms and conditions
+          </label>
+        </fieldset>
+
+        <button type="submit">Submit</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Nature Exploration Club. All Rights Reserved.</p>
+  </footer>
+</body>
+</html>
